@@ -2,22 +2,159 @@
 {% load static %}
 {% block content %}
 
-<div class="container" style="text-align: center; padding-top: 100px; background-color: #FAF9F6; min-height: 100vh;">
-    <a href="{% url 'home' %}">
-        <img class="headerimage" src="{% static 'img/logo.png' %}" style="max-width: 300px; margin-bottom: 40px;">
-    </a>
+<div class="landing-container">
+    <div class="logo-section">
+        <a href="{% url 'home' %}">
+            <img class="logo" src="{% static 'img/logo.png' %}" alt="Prep Tech Logo">
+        </a>
+    </div>
     
-    <p style="font-family: 'Rosarivo', serif; color: #002365; font-size: 18px; margin-bottom: 20px;">
-        Please contact Pete Prados, COO 
-        <a href="mailto:pete@preptechmed.com" style="color: #606062; text-decoration: none; border-bottom: 1px solid #606062;">
-            pete@preptechmed.com
-        </a> 
-        for more info.
-    </p>
-    
-    <p style="font-family: 'Rosarivo', serif; color: #002365; font-size: 16px;">
-        Thank you!
-    </p>
+    <div class="info-card">
+        <p class="contact-text">
+            Please contact <a href="mailto:pete@preptechmed.com" class="contact-link">Pete Prados, COO</a> for more info.
+        </p>
+        <p class="thank-you">Thank you!</p>
+    </div>
 </div>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #FAF9F6;
+        font-family: 'Rosarivo', serif;
+    }
+    
+    .landing-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+    
+    .logo-section {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 40px;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    
+    .logo {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+    
+    .logo:hover {
+        transform: scale(1.02);
+    }
+    
+    .info-card {
+        background-color: white;
+        border-left: 4px solid #002365;
+        border-radius: 8px;
+        padding: 25px 40px;
+        box-shadow: 0 4px 15px rgba(0, 35, 101, 0.1);
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        animation: slideUp 0.8s ease-out;
+    }
+    
+    .contact-text {
+        color: #002365;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    .contact-link {
+        color: #606062;
+        text-decoration: none;
+        position: relative;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    
+    .contact-link:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #606062;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+    }
+    
+    .contact-link:hover {
+        color: #002365;
+    }
+    
+    .contact-link:hover:after {
+        transform: scaleX(1);
+    }
+    
+    .thank-you {
+        color: #002365;
+        font-size: 16px;
+        margin-top: 15px;
+        font-style: italic;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+        from { 
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to { 
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .logo-section {
+            max-width: 85%;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            padding: 20px 25px;
+        }
+        
+        .contact-text {
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .logo-section {
+            max-width: 90%;
+        }
+        
+        .info-card {
+            width: 85%;
+            padding: 15px 20px;
+        }
+        
+        .contact-text {
+            font-size: 15px;
+        }
+        
+        .thank-you {
+            font-size: 14px;
+        }
+    }
+</style>
 
 {% endblock %}
