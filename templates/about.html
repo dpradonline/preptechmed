@@ -1,0 +1,15 @@
+{% extends 'main_base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="about">
+        <div>
+            <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}"></a><br>
+        </div>
+        <div>
+            {% for abt in about %}
+                {{ abt.content | safe }}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

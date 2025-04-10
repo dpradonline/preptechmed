@@ -1,0 +1,10 @@
+{% extends 'main_base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="container">
+        <a href="{% url 'home' %}">
+            <img class="headerimage" src="{% static 'img/logo.png' %}">
+        </a>
+    </div>
+{% endblock %}

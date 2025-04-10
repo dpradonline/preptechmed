@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Account | Prep Tech</title>
+    <meta name="description" content="Prep Tech">
+    <meta name="author" content="Account | Prep Tech">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}"/>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Adamina'>
+    <link rel="stylesheet" href="{% static 'css/accountland.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div class="menu-icon">
+    <span class="menu-icon__line menu-icon__line-left"></span>
+    <span class="menu-icon__line"></span>
+    <span class="menu-icon__line menu-icon__line-right"></span>
+</div>
+
+{% block content %}
+{% endblock %}
+
+{% if request.path == "/" %}
+    <h1><a href="{% url 'more' %}">MORE</a></h1>
+{% endif %}
+
+<script src="{% static 'js/jquery213.js' %}"></script>
+<script src="{% static 'js/accountland.js' %}"></script>
+</body>
+</html>

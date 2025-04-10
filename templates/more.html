@@ -1,0 +1,235 @@
+{% extends 'main_base.html' %}
+{% block content %}
+
+
+<div class="container">
+    <div class="accordion">
+        <h1 id="stewardship">Stewardship</h1>
+
+        {% for item in point %}
+            {% if item.category == "stewardship" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="churches">Churches & Denominations</h1>
+
+        {% for item in point %}
+            {% if item.category == "churches" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="truth">What Is Truth & How Should It Be Handled</h1>
+
+        {% for item in point %}
+            {% if item.category == "truth" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="sabbath">Sabbath</h1>
+
+        {% for item in point %}
+            {% if item.category == "sabbath" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="tongues">Tongues</h1>
+
+        {% for item in point %}
+            {% if item.category == "tongues" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="ordination">Ordination/Seminaries</h1>
+
+        {% for item in point %}
+            {% if item.category == "ordination" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="works">Works</h1>
+
+        {% for item in point %}
+            {% if item.category == "works" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="freewill">God's Sovereignty & "Free Will"</h1>
+
+        {% for item in point %}
+            {% if item.category == "freewill" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="faith">Prayer Of Faith</h1>
+
+        {% for item in point %}
+            {% if item.category == "faith" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="rewards">Rewards</h1>
+
+        {% for item in point %}
+            {% if item.category == "rewards" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="hell">Hell, Satan, & God's Wrath</h1>
+
+        {% for item in point %}
+            {% if item.category == "hell" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="metaphysics">Body, Spirit, & Soul</h1>
+
+        {% for item in point %}
+            {% if item.category == "metaphysics" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="after">Rapture, Millennium, Antichrist, & New Earth</h1>
+
+        {% for item in point %}
+            {% if item.category == "after" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="godhead">Trinity, Godhead, & Throne Room</h1>
+
+        {% for item in point %}
+            {% if item.category == "godhead" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <h1 id="prayer">Prayer</h1>
+
+        {% for item in point %}
+            {% if item.category == "prayer" %}
+                <div class="accordion__single">
+                    <input class="accordion__single__hidden" type="checkbox" id="tithe-{{ forloop.counter }}">
+                    <label class="accordion__single__question"
+                           for="tithe-{{ forloop.counter }}">{{ item.question }}</label>
+                    <p class="accordion__single__answer">
+                        {{ item.answer }}
+                    </p>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
