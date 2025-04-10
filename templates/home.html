@@ -1,10 +1,23 @@
-{% extends 'main_base.html' %}
+{% extends 'main.base.html' %}
 {% load static %}
 {% block content %}
 
-    <div class="container">
-        <a href="{% url 'home' %}">
-            <img class="headerimage" src="{% static 'img/logo.png' %}">
-        </a>
-    </div>
+<div class="container" style="text-align: center; padding-top: 100px; background-color: #FAF9F6; min-height: 100vh;">
+    <a href="{% url 'home' %}">
+        <img class="headerimage" src="{% static 'img/logo.png' %}" style="max-width: 300px; margin-bottom: 40px;">
+    </a>
+    
+    <p style="font-family: 'Rosarivo', serif; color: #002365; font-size: 18px; margin-bottom: 20px;">
+        Please contact Pete Prados, COO 
+        <a href="mailto:pete@preptechmed.com" style="color: #606062; text-decoration: none; border-bottom: 1px solid #606062;">
+            pete@preptechmed.com
+        </a> 
+        for more info.
+    </p>
+    
+    <p style="font-family: 'Rosarivo', serif; color: #002365; font-size: 16px;">
+        Thank you!
+    </p>
+</div>
+
 {% endblock %}
